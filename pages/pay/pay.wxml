@@ -1,0 +1,46 @@
+<view class="app">
+    <view class="top-content">
+        <view class="address-show">
+            <view>
+                {{myAddr.userName}}
+                <p>
+                    {{myAddr.telNumber}}
+                </p>
+            </view>
+            <view>
+                {{myAddr.provinceName}} {{myAddr.cityName}} {{myAddr.countyName}} {{myAddr.detailInfo}}
+            </view>
+        </view>
+    </view>
+    <view class="middle-content">
+        <view class="content">
+            <view wx:for="{{goodslist}}" wx:key="index" data-index="{{index}}" data-item="{{item}}"  bindtap="checkGoods">
+                <image src="{{urlImg}}/images/upload/prd/{{item.goods_logo}}" wx:if="{{item}}"/>
+                <view>
+                    <p>
+                        {{item.goods_name}}
+                    </p>
+                    <view class="price">￥{{item.goods_price}} 元</view>
+                    <div class="add-subtract-cat">
+                        <div>x{{item.num}}</div>
+                      </div>
+                </view>
+            </view>
+        </view>          
+        <view style="height:140rpx"></view>
+    </view>
+    <view class="bottom-content" wx:if="{{goodslist.length}}">
+    <view style="width:40%;text-align:center">   
+        共({{allPcs}})件
+    </view>
+    <view>
+        <view>
+            <div>合计:￥ {{!allMoney?'0':allMoney}}</div>
+            <div>包含运费</div>
+        </view>
+        <view class="allNumber deep" bindtap="balance">
+            支付({{allNumber}})
+        </view>
+    </view>
+    </view>
+</view>

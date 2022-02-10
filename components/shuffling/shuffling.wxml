@@ -1,0 +1,16 @@
+
+<view class="swiperbox">
+<swiper indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" 
+    duration="{{duration}}"
+    indicator-active-color="#ffffff"
+    circular="true"
+    indicator-color="#979797">
+    <block wx:for="{{imgs}}" wx:key="index">
+        <swiper-item skip-hidden-item-layout="true">
+            <image wx:if="{{item}}" src="{{item}}"  mode="widthFix" /><!--mode="widthFix"-->
+        </swiper-item>
+    </block>
+</swiper>
+</view>
+  

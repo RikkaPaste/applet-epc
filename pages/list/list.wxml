@@ -1,0 +1,74 @@
+<view class="app">
+  <view class="top">
+    <input placeholder="请输入商品关键字,按回车键搜索"
+    value="{{value}}" type="text"  bindconfirm="searchGoods"/>
+  </view>
+  <view class="classify">
+    <view class="allCate">
+      <view class="level-tow">
+      <!-- 二级选项卡 -->
+        <view wx:for="{{cateNamesTwo}}" wx:key="index" data-index="{{index}}" data-item="{{item}}" bindtap="selectTwo">
+          <image class="Topimage" 
+          src="{{urlImg}}/images/cateicon/{{item.cateLogo}}" wx:if="{{item}}"/>
+            <span wx:if="{{item.id==selectThreeid}}" class="SE">
+                {{item.cateName}}
+            </span>
+            <span wx:else>
+                 {{item.cateName}}
+            </span>
+        </view>
+      </view>
+    </view>
+      <!-- 一级选项卡 -->
+          <picker class="picker" bindchange="bindPickerChange" value="{{index}}" range="{{cateNamesOne}}">
+        <view>
+          {{!cateNamesOne[index]?"分类":cateNamesOne[index]}}
+        </view>
+      </picker>
+  </view>
+
+  <!-- 三级选项卡 -->
+    <view class="all-bottom">
+        <view class="left-options"> 
+            <view class="level-three" wx:if="{{cateNamesThree.length}}">
+                <view wx:for="{{cateNamesThree}}" wx:key="index"
+                 data-index="{{index}}" data-item="{{item}}" bindtap="selectThree">
+                    <view wx:if="{{item.id==selectFourid}}" class="v-style">
+                        {{item.cateName}}
+                    </view>
+                    <view wx:else>
+                         {{item.cateName}}
+                    </view>
+                </view>           
+            </view>  
+             <view class="level-three" wx:else>
+               <view class="null-three">
+                   这里啥都没有!
+               </view>
+                    
+            </view>      
+        </view>
+        <view class="right-content">
+            <view class="content" wx:if="{{cateNamesFour.length}}">
+              <view wx:for="{{cateNamesFour}}"
+                 wx:key="index"
+                 data-index="{{index}}" data-item="{{item}}" bindtap="selectFour">
+                 <image src="{{urlImg}}/images/upload/prd/{{item.goodsSmallLogo}}" wx:if="{{item}}" />
+                   <p>                   
+                  {{item.goodsName}}
+                   </p>
+                <view class="price">￥{{item.goodsPrice}} 元</view>  
+                <div class="add-cat" catchtap="addCat" data-item="{{item}}">加入购物车</div>
+                   
+              </view>
+            </view>
+              <view class="content" wx:else>
+              <div class="null-content">
+                  这里啥都没有!
+              </div>
+            </view>
+        </view>
+          
+    </view>
+      
+</view>

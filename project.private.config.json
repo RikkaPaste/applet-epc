@@ -1,0 +1,24 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/shopping/shopping_cart",
+          "pathName": "pages/shopping/shopping_cart",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

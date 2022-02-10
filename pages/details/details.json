@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "shuffling": "../../components/shuffling/shuffling"
+  },
+  "navigationBarTitleText": "商品详情"
+}

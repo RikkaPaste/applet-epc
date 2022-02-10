@@ -1,0 +1,43 @@
+<view>
+    <shuffling imgs="{{goods.pics}}" />
+</view>
+
+<view style="background:#ffffff">
+    <view class="goodsPrice">
+        <p style="font-size:26rpx">￥</p>{{!goods.goods_price?"----":goods.goods_price}} 元
+    </view>
+    <view class="goodsName">
+        {{!goods.goods_name?"--------":goods.goods_name}}
+    </view>
+
+</view>
+<view class="gdsdetail">
+    <view class="label">
+        商品图片
+    </view>
+    <rich-text nodes="{{goods.goods_introduce}}"></rich-text>
+</view>
+<view class="bottom">
+    <button class="buttondh dh" type="default" open-type="contact" >
+        <view class="iconfont icon-dianhua" />
+        客服
+    </button>
+    <button class="buttonfx fx" type="default" open-type="share" >
+      <view class="iconfont icon-fenxiang" />
+        分享
+    </button>
+    <view class="addcat bt" bindtap="addCat">
+        加入购物车({{!goods.num?"0":goods.num}})
+    </view>
+    <view class="buy bt" bindtap="buyNow">
+        立即购买
+    </view>       
+</view>
+<dialog id='dialog' 
+      title='授权提示' 
+      content='茶斟君品需要您的授权才能提供更好的服务哦' 
+      confirmText='授权'
+      bind:confirmEvent='confirmEvent'
+      bind:bindGetUserInfo='bindGetUserInfo'>
+</dialog>
+  

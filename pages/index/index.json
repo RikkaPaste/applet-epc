@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "shuffling": "../../components/shuffling/shuffling",
+    "goodslist":"../../components/goods/goodslist"
+  }
+}

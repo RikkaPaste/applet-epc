@@ -1,0 +1,65 @@
+<view class="app">
+    <view class="top-content">
+        <view class="goods-address" bindtap="address" wx:if="{{!myAddr.userName}}">
+            设置收货地址
+        </view>
+        <view wx:else class="address-show" bindtap="address">
+            <view>
+                {{myAddr.userName}}
+                <p>
+                    {{myAddr.telNumber}}
+                </p>
+            </view>
+            <view>
+                {{myAddr.provinceName}} {{myAddr.cityName}} {{myAddr.countyName}} {{myAddr.detailInfo}}
+            </view>
+        </view>
+    </view>
+    <view class="middle-content">
+        <span>
+            购物车商品列表
+        </span>
+        <view class="content" wx:if="{{goodslist.length}}">
+            <view wx:for="{{goodslist}}" wx:key="index" data-index="{{index}}" data-item="{{item}}"
+                bindtap="checkGoods">
+                <checkbox data-item="{{item.goods_id}}" checked="{{item.checked}}" catchtap="checked" />
+                <image src="{{urlImg}}/images/upload/prd/{{item.goods_logo}}" wx:if="{{item}}" />
+                <view>
+                    <p>
+                        {{item.goods_name}}
+                    </p>
+                    <view class="price">￥{{item.goods_price}} 元</view>
+                    <div class="add-subtract-cat">
+                        <div class="an" catchtap="count" data-op="1" data-goodsid="{{item.goods_id}}">+</div>
+                        <div>{{item.num}}</div>
+                        <div class="an" catchtap="count" data-op="-1" data-goodsid="{{item.goods_id}}">-</div>
+                    </div>
+                </view>
+            </view>
+        </view>          
+        <view class="content" wx:else>
+            <div class="null-content">
+                快去加点料!
+                <div class="go-goods" bindtap="goIndex">前往首页</div>
+            </div>
+        </view>
+        <view style="height:140rpx"></view>
+    </view>
+    <view class="bottom-content" wx:if="{{goodslist.length}}">
+    <view style="width:40%;text-align:center">   
+        已选 {{allPcs}} <checkbox checked="{{goodslist.length==allPcs}}" catchtap="allchecked"/> 全选/{{goodslist.length}}
+    </view>
+    <view>
+        <view>
+            <div>合计:￥ {{!allMoney?'0':allMoney}}</div>
+            <div>包含运费</div>
+        </view>
+        <view class="allNumber deep" wx:if="{{allPcs}}" bindtap="balance">
+            结算({{allNumber}})
+        </view>
+        <view class="allNumber latent" wx:else bindtap="balance">
+            结算({{0}})
+        </view>
+    </view>
+    </view>
+</view>

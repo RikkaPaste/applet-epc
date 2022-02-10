@@ -1,0 +1,230 @@
+page {
+  position: static;
+  background-color: #fff;//rgb(238, 242, 245);
+
+  .app {
+    height: 100vh;
+    overflow: hidden;
+    .top {
+      width: 100%;
+      background-color: #00eaea;
+      height: 10vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: sticky;
+      top: 0;
+      z-index: 9;
+
+      input {
+        width: 85%;
+        background: rgb(255, 255, 255);
+        height: 85%;
+        padding: 0 40rpx;
+        border-radius: 30rpx;
+      }
+    }
+
+    .classify {
+      width: 100%;
+      background: #ffffff;
+      height: 15vh;
+      position: sticky;
+      display: flex;
+      flex-wrap: nowrap;
+      border-bottom: 3rpx solid rgba(0, 0, 0, .3);
+      top: 100rpx;
+      .allCate {
+        width: 82%;
+        overflow: auto;
+        text-align: left;
+        border-bottom: 1px solid #ebebeb;
+        padding:20rpx 0;
+        background: #fff;
+        top: 0;
+        left: 0;
+        z-index: 20;
+        display: flex;
+        align-items: center;
+
+        &::after {
+          content: "";
+          position: absolute;
+          right: 18%;
+          top: 0;
+          bottom: 0;
+          z-index: 1;
+          width: 3%;
+          background: linear-gradient(90deg, rgba(240, 235, 235, 0), #f6f6f6);
+        }
+
+        .level-tow {
+          white-space: nowrap;
+          display: flex;
+          height: 100%;
+          padding: 0 20rpx;
+          view {
+            padding: 0 30rpx;
+            text-align: center;
+            .Topimage {
+              width: 76rpx;
+              height: 90rpx;
+            }
+            .SE{
+              color:#0db8b3;
+              font-weight: bold;
+            }
+            span{
+              display: block;
+              margin-top: 10rpx;
+            }
+            /*     &:hover{
+                color:#0db8b3
+            } */
+          }
+        }
+      }
+
+      .picker {
+        width: 17%;
+        background: #eff3f3;
+        text-align: center;
+        border-left: 3rpx solid rgba(0, 0, 0, .3);
+        height: 100rpx;
+        font-size: 26rpx;
+        border-radius: 25rpx 0 0 25rpx;
+        position: relative;
+        transform: translateY(50%);
+        box-shadow: -20px 0px 20px 20px rgba(0, 0, 0, 0.06);
+
+        view {
+          line-height: 100rpx;
+        }
+      }
+    }
+
+    .all-bottom {
+      display: flex;
+      justify-content: space-around;
+      height: 75vh;
+      .left-options {
+        width: 33%;
+        overflow: auto;
+        text-align: left;
+        border-right: 3rpx solid #dadada;
+        padding: 10rpx 0;
+        background: #fff;
+        top: 0;
+        left: 0;
+        z-index: 20;
+        position: sticky;
+        display: flex;
+        justify-content: center;
+        margin: 5rpx 0;
+        .level-three {
+          width: 100%;
+          .null-three{
+              height:100%;
+              display:flex;
+              align-items: center;
+              justify-content: center;
+          }
+          view {
+            view{
+            padding: 20rpx 0;
+            margin: 20rpx 0;
+            text-align: center;
+             }
+             .v-style{
+                font-weight: 550;
+                position: relative;
+                &::after {
+                content: "";
+                display: block;
+                width: 5rpx;
+                height: 40rpx;
+                background: #ff5934;
+                position: absolute;
+                left: 0;
+                top: 22rpx;
+               }
+            }
+          }
+        }
+      }
+      .right-content{
+        width:66%;
+        overflow: auto;
+        text-align: left;
+        border-right: 3rpx solid #dadada;
+        padding: 10rpx 0;
+        background: #fff;
+        top: 0;
+        left: 0;
+        z-index: 20;
+        position: sticky;
+        display: flex;
+        justify-content: center;
+        margin: 5rpx 0;
+        .content{
+            width: 100%;
+            .null-content{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width:100%;
+                height:100%;
+            }
+            view{
+                width:100%;
+                height:200rpx;
+                border-bottom: 3rpx solid rgba(0, 0, 0, .3);
+                padding: 20rpx 0;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-wrap: wrap;
+                image{
+                    width:30%;
+                    height:70%;
+                    border-radius: 15rpx;
+                }
+                p{
+                    width: 65%;
+                    font-size: 26rpx;
+                    letter-spacing: 1rpx;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    //弹性盒子伸缩盒子模型显示
+                    display: -webkit-box;
+                    //限制一个块元素显示的文本行数
+                    -webkit-line-clamp: 4;
+                    //设置检索伸缩盒对象的子元素的排列方式
+                    -webkit-box-orient: vertical;
+                    height: 130rpx;
+                }
+                .price{
+                    width:50%;
+                    height:10%;
+                    color:rgba(182, 7, 7, 1);
+                    font-size:26rpx;
+                    border: 0;
+                    justify-content: center;
+                }
+                .add-cat{
+                    width: 45%;
+                    height: 30%;
+                    border: 2rpx solid rgba(0, 0, 0, .3);
+                    justify-content: center;
+                    background: #eeeeee;
+                    align-items: center;
+                    border-radius: 15rpx;
+                    display: flex;
+                    font-size: 30rpx;
+                }
+            }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+page {
+  background-color: #eef2f5;
+  position: static;
+}
+page .top {
+  background-color: #00eaea;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 9;
+}
+page .top button {
+  height: 90rpx;
+  width: 92vw;
+  border-radius: 30rpx;
+}
+page .shuffling {
+  width: 100%;
+}
+page .goTop {
+  height: 80rpx;
+  width: 80rpx;
+  position: fixed;
+  bottom: 110rpx;
+  right: 30rpx;
+  border-radius: 50%;
+  z-index: 100;
+  background: #b8c2c1;
+}
+page image {
+  width: 100%;
+  height: 100%;
+}
+page .tag {
+  background: #ffffff;
+  line-height: 100rpx;
+  margin: 20rpx auto;
+  text-align: center;
+  font-size: 32rpx;
+  font-weight: normal;
+  position: sticky;
+  top: 100rpx;
+  border-radius: 15rpx;
+  border-bottom: 3rpx solid rgba(0, 0, 0, 0.4);
+}
+.bottomSmg {
+  text-align: center;
+  border-bottom: 5rpx dotted #525355;
+  font-size: 26rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100rpx;
+  color: rgba(44, 52, 66, 0.8);
+}
+.bottomSmg .on,
+.bottomSmg .next {
+  font-size: 30rpx;
+  width: 15%;
+  background: #a6b6c9;
+  border-radius: 10%;
+  color: white;
+  margin-right: 10rpx;
+}

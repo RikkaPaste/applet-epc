@@ -1,0 +1,14 @@
+<Tabs bindSelectItem="selectItem" menus="{{menus}}">
+        <view wx:if="{{menus[0].active}}">
+            全部订单
+        </view>
+        <view wx:elif="{{menus[1].active}}">
+            待发货
+        </view>
+        <view wx:elif="{{menus[2].active}}">
+            已发货
+        </view>
+        <view wx:else>
+            退款
+        </view>
+</Tabs>
