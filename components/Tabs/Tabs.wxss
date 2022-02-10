@@ -1,0 +1,19 @@
+page {
+  position: static;
+  background-color: #eef2f5;
+}
+page .tabtitle {
+  display: flex;
+  background: white;
+}
+page .tabtitle .tabitem {
+  flex: 1;
+  font-size: 32rpx;
+  text-align: center;
+  padding: 30rpx 0;
+}
+page .tabtitle .active {
+  color: #13b8a2;
+  font-weight: bold;
+  border-bottom: 4rpx solid #13b8a2;
+}

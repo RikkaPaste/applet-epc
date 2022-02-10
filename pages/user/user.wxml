@@ -1,0 +1,60 @@
+<view class="app" >
+  <view class="head-content">
+      <image class="top-img" src="{{userInfo.avatarUrl}}" mode="widthFix" />
+      <image class="min-img" src="{{userInfo.avatarUrl}}" mode="widthFix"   bindtap="getUserInfo"  wx:if="{{!result}}"/>
+      <image class="min-img" src="{{userInfo.avatarUrl}}" mode="widthFix"  wx:else/>
+      <view class="top-name" wx:if="{{result}}">{{userInfo.nickName}}</view>
+      <view class="top-name" style="color:#6b6b6b" wx:else>请点击相框授权</view>
+  </view>
+  
+  <view class="middle-cntent">
+      <view style="overflow: auto;height:100%;">
+    <view class="bottom">
+      <view class="state">
+        <view>我的订单</view>
+        <view class="state-goods">
+        <view class="all-indent"  bindtap="accessState" data-state="1">   
+            <view class="iconfont icon-dingdan"/>
+            <view>全部订单</view>         
+        </view>
+        <view class="await-goods" bindtap="accessState" data-state="2">
+            <view class="iconfont icon-yunshuzhongwuliu-xianxing"/>
+            <view>待发货</view>
+        </view>
+        <view class="shipped" bindtap="accessState" data-state="3">  
+            <view class="iconfont icon-yunshuzhongwuliu-xianxing"/>
+            <view>已发货</view>    
+        </view>
+        <view class="after-sales" bindtap="accessState" data-state="4">
+            <view class="iconfont icon-tuipiao"/>
+            <view>退款/退货</view>
+        </view>
+
+        </view>
+      </view>
+      <view class="IPAM" bindtap="address">
+        <view>  
+          管理收货地址
+        </view>
+      </view>
+      <button class="contact-service" type="default" open-type="contact" >
+        <view>  
+        联系客服 微信号:Qqianmi02
+      </view>
+      </button>
+      <view class="contact" bindtap="contact">
+      <view>  
+        联系我们
+      </view>
+      </view>
+      <view class="nominate">
+      <view>  
+        把应用推荐给他人
+      </view>
+      </view>       
+    </view>   
+    </view>
+  </view>
+</view>
+  
+    

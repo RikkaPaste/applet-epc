@@ -1,0 +1,21 @@
+<image src='../../icon/top.png' class='goTop' hidden="{{!floorstatus}}" bindtap="goTop"></image>
+<view class="top">
+    <button bindtap="search" >搜索</button>
+</view>
+<view>
+    <shuffling imgs="{{img}}"/>
+</view>
+<view>
+    <view class="tag">商品列表</view>
+    <goodslist goods="{{goodslist}}" />
+    <!-- 上下页切换 -->
+    <view class="bottomSmg" hidden="{{!showbottom}}">
+        <view class="on" bindtap="onPage" hidden="{{!pagelist}}">
+            on
+        </view>
+        俺也是有底线的（｀Δ´）！
+        <view class="next" bindtap="nextPage" hidden="{{(goodscount>=pagelist)?false:true}}">
+            next
+        </view>
+    </view>
+</view>

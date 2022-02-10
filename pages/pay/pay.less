@@ -1,0 +1,156 @@
+page {
+    background-color: rgb(238, 242, 245);
+    position: static;
+
+    .app {
+        position: relative;
+
+        .top-content {
+            background: rgba(250, 250, 250, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .address-show {
+                width: 100%;
+                height: auto;
+                font-size: 30rpx;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                padding: 30rpx;
+                background: rgb(248, 246, 246);
+                border:3rpx solid rgba(0, 0, 0, .2);
+                view {
+                    width: 100%;
+                    padding: 10rpx;
+                    position: relative;
+
+                    p {
+                        margin-left: 20rpx;
+                    }
+                }
+                view:last-child {
+                    font-size: 26rpx;
+                    color: rgba(0, 0, 0, .7);
+                }
+            }
+
+        }
+
+        .middle-content {
+            .content {
+                width: 100%;
+                background: rgb(250, 247, 247);
+                view {
+                    width: 100%;
+                    height: 200rpx;
+                    border-bottom: 3rpx solid rgba(0, 0, 0, .3);
+                    padding: 20rpx 0;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    margin-top: 3rpx;
+
+                    image {
+                        width: 27%;
+                        height: 100%;
+                        border-radius: 20rpx;
+                    }
+
+                    view {
+                        width: 62%;
+                        border: 0;
+                        display: flex;
+                        padding: 0;
+                        justify-content: center;
+
+                        p {
+                            width: 90%;
+                            font-size: 26rpx;
+                            letter-spacing: 1rpx;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            //弹性盒子伸缩盒子模型显示
+                            display: -webkit-box;
+                            //限制一个块元素显示的文本行数
+                            -webkit-line-clamp: 4;
+                            //设置检索伸缩盒对象的子元素的排列方式
+                            -webkit-box-orient: vertical;
+                            height: 130rpx;
+                        }
+
+                        .price {
+                            width: 45%;
+                            height: auto;
+                            color: rgba(182, 7, 7, 1);
+                            font-size: 26rpx;
+                            border: 0;
+                            text-align: left;
+                        }
+
+                        .add-subtract-cat {
+                            width: 45%;
+                            height: 30%;
+                            border: 2rpx solid rgba(0, 0, 0, .3);
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 15rpx;
+                            display: flex;
+                            font-size: 30rpx;
+                            overflow: hidden;
+                            div {
+                                width: 33%;
+                                height: 100%;
+                                justify-content: center;
+                                align-items: center;
+                                display: flex;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            
+        }
+        
+        .bottom-content{
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            height:130rpx;
+            background: rgb(255, 255, 255);
+            border-top: 3rpx solid rgba(0, 0, 0, .2);
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+            font-size: 32rpx;
+            view:last-child{
+                display: flex;
+                justify-content: center;
+                width:60%;
+                height: 100%;
+                align-items: center;
+            view:first-child{
+                width:75%;
+                text-align: center;
+                font-size: 28rpx;
+                margin-right:10rpx;
+                display:flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+                .stat{
+                    border-radius: 15rpx;
+                }
+                .deep{
+                    background: rgba(91, 221, 65,.8);
+                }
+                .latent{
+                    background: rgba(33, 145, 10, 0.5);
+                    color: white;
+                }
+            }
+        }
+    }
+}

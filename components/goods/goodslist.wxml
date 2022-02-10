@@ -1,0 +1,18 @@
+<view wx:for="{{goods}}" wx:key="index">
+    <view class="goodslist">
+        <view wx:for="{{item}}" wx:key="index" class="goods" data-index="{{index}}" data-item="{{item}}"
+            bindtap="getId">
+            <view class="img">
+                <image src="{{urlImg}}/images/upload/prd/{{item.goodsSmallLogo}}" mode="widthFix" wx:if="{{item}}"/>
+            </view>
+            <view class="center">
+            <span>
+                {{item.goodsName}}
+            </span>
+            <view>
+               <p class="price">￥{{item.goodsPrice}} 元</p>
+            </view>                           
+            </view>   
+        </view>
+    </view>
+</view>
