@@ -1,4 +1,4 @@
 export default {
-    'apiHosts':'http://lqgapidemo.quechao.xyz',
-    'apiHost':'http://localhost:3000',
+    'apiHosts':'https://api.rikkas.xyz',
+    'apiHost':'https://api.rikkas.xyz',
 }
